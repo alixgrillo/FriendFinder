@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Friend Finder</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 </head>
 
 <body>
@@ -18,16 +24,17 @@
         <h2>About You</h2>
         <div class="form-group">
             <label for="name">Name (Required)</label>
-            <input type="text" class="form-control" id="name">
+            <input type="text" class="form-control" id="name" required>
         </div>
         <div class="form-group">
             <label for="photo">Link to Photo Image (Required)</label>
-            <input type="text" class="form-control" id="photo">
+            <input type="text" class="form-control" id="photo" required="true">
         </div>
         <hr class="my-4">
+
         <div class="form-group">
-            <label for="question1">Example select</label>
-            <select class="form-control" id="question1">
+            <label for="question1">I have a vivid imagination.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question1">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -36,8 +43,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question2">Example select</label>
-            <select class="form-control" id="question2">
+            <label for="question2">I enjoy reading challenging books and articles.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question2">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -46,8 +53,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question3">Example select</label>
-            <select class="form-control" id="question3">
+            <label for="question3">I always chat with lots of people at parties.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question3">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -56,8 +63,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question4">Example select</label>
-            <select class="form-control" id="question4">
+            <label for="question4">I believe that there is no absolute right or wrong.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question4">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -66,8 +73,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question5">Example select</label>
-            <select class="form-control" id="question5">
+            <label for="question5">I love to daydream.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question5">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -76,8 +83,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question6">Example select</label>
-            <select class="form-control" id="question6">
+            <label for="question6">I do not enjoy going to art galleries or exhibitions.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question6">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -86,8 +93,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question7">Example select</label>
-            <select class="form-control" id="question7">
+            <label for="question7">I am not interested in theoretical discussions.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question7">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -96,8 +103,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question8">Example select</label>
-            <select class="form-control" id="question8">
+            <label for="question8">I look at the bright side of life.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question8">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -106,8 +113,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question9">Example select</label>
-            <select class="form-control" id="question9">
+            <label for="question9">I think we should take advantage of opportunities to travel.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question9">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -116,8 +123,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="question10">Example select</label>
-            <select class="form-control" id="question10">
+            <label for="question10">I enjoy watching movies about historical events.</label><br>
+            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question10">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -125,9 +132,11 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <div id="error"></div>
         <button type="submit" class="btn btn-primary" id="submit">Submit</button>
         <hr class="my-4">
-        <a href="api/friends">API Friends List</a> | <a href="https://github.com/alixgrillo/FriendFinder" target="_blank">Github Repo</a>
+        <a href="api/friends">API Friends List</a> | <a href="https://github.com/alixgrillo/FriendFinder"
+            target="_blank">Github Repo</a>
     </div>
 
     <!-- Modal -->
@@ -142,7 +151,7 @@
                     </button>
                 </div>
                 <div class="modal-body row">
-                    <div class="col-sm-6" id="name-div"></div>               
+                    <div class="col-sm-6" id="name-div"></div>
                     <div class="col-sm-6" id="photo-div"></div>
                 </div>
                 <div class="modal-footer">
@@ -152,9 +161,34 @@
         </div>
     </div>
 </body>
+<style>
+    .selects {
+        padding: 9px;
+        border: solid 1px #517B97;
+        outline: 0;
+        background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #CAD9E3), to(#FFFFFF));
+        background: -moz-linear-gradient(top, #FFFFFF, #CAD9E3 1px, #FFFFFF 25px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+
+    }
+
+    #error p {
+        color: red;
+    }
+
+    #submit {
+        width: 100%;
+    }
+</style>
 <script type="text/javascript">
     $("#submit").on("click", function (event) {
         event.preventDefault();
+        if ($("#name").val() == "" || $("#photo").val() == "") {
+            $("#error").html("<p>Please provide your name and a link to your photo before submitting.</p>");
+            return;
+        }
         var scoreArr = [];
         for (var i = 1; i < 11; i++) {
             scoreArr.push(parseInt($("#question" + i).val().slice(0, 1)));
@@ -173,6 +207,7 @@
             photoDiv.append("<img src=" + bestFriend.photo + " alt='" + bestFriend.name + "photo' width=200px>");
             $("#name").val("");
             $("#photo").val("");
+            $("#error").empty();
             for (var i = 1; i < 11; i++) {
                 $("#question" + i).val("1 (Strongly Disagree)");
             }
