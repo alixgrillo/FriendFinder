@@ -127,7 +127,7 @@
         </div>
         <button type="submit" class="btn btn-primary" id="submit">Submit</button>
         <hr class="my-4">
-        <a href="api/friends">API Friends List</a> | <a href="#">Github Repo</a>
+        <a href="api/friends">API Friends List</a> | <a href="https://github.com/alixgrillo/FriendFinder" target="_blank">Github Repo</a>
     </div>
 
     <!-- Modal -->
@@ -141,7 +141,9 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body row">
+                    <div class="col-sm-6" id="name-div"></div>               
+                    <div class="col-sm-6" id="photo-div"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -165,13 +167,14 @@
         console.log(newFriend);
         $.post("/api/friends", newFriend).then(function (bestFriend) {
             console.log(bestFriend);
-            var friendDiv = $(".modal-body");
-            friendDiv.append("<h3>" + bestFriend.name + "</h3>");
-            //friendDiv.append("<img src=" + bestFriend.photo + " alt='" + bestFriend.name + "photo'>");
+            var nameDiv = $("#name-div");
+            nameDiv.append("<h3>" + bestFriend.name + "</h3>");
+            var photoDiv = $("#photo-div");
+            photoDiv.append("<img src=" + bestFriend.photo + " alt='" + bestFriend.name + "photo' width=200px>");
             $("#name").val("");
             $("#photo").val("");
             for (var i = 1; i < 11; i++) {
-                $("#question" + i).val("");
+                $("#question" + i).val("1 (Strongly Disagree)");
             }
             $('.modal').modal("show");
         })
