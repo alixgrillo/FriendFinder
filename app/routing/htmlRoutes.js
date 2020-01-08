@@ -10,6 +10,11 @@ module.exports = function(router, app, path){
         console.log("home");
         res.sendFile(path.join(__dirname, '/../public/home.html'));
     });
+
+    router.get('/*', function (req, res) {
+        console.log("home");
+        res.sendFile(path.join(__dirname, '/../public/home.html'));
+    });
     return router;
 }
 

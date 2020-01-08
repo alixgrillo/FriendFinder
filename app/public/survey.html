@@ -10,6 +10,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel=“stylesheet” href=“https://use.fontawesome.com/releases/v5.6.3/css/all.css” integrity=“sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/” crossorigin=“anonymous” />
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -21,7 +22,7 @@
     <div class="container mt-5 mb-5">
         <h1>Survey Questions</h1>
         <hr class="my-4">
-        <h2>About You</h2>
+        <h3>About You</h3>
         <div class="form-group">
             <label for="name">Name (Required)</label>
             <input type="text" class="form-control" id="name" required>
@@ -31,7 +32,7 @@
             <input type="text" class="form-control" id="photo" required="true">
         </div>
         <hr class="my-4">
-
+        <h3>Question 1</h3>
         <div class="form-group">
             <label for="question1">I have a vivid imagination.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question1">
@@ -42,6 +43,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <h3>Question 2</h3>
         <div class="form-group">
             <label for="question2">I enjoy reading challenging books and articles.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question2">
@@ -52,6 +54,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <h3>Question 3</h3>
         <div class="form-group">
             <label for="question3">I always chat with lots of people at parties.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question3">
@@ -62,6 +65,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <h3>Question 4</h3>
         <div class="form-group">
             <label for="question4">I believe that there is no absolute right or wrong.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question4">
@@ -72,6 +76,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <h3>Question 5</h3>
         <div class="form-group">
             <label for="question5">I love to daydream.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question5">
@@ -82,6 +87,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <h3>Question 6</h3>
         <div class="form-group">
             <label for="question6">I do not enjoy going to art galleries or exhibitions.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question6">
@@ -92,6 +98,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <h3>Question 7</h3>
         <div class="form-group">
             <label for="question7">I am not interested in theoretical discussions.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question7">
@@ -102,6 +109,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <h3>Question 8</h3>
         <div class="form-group">
             <label for="question8">I look at the bright side of life.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question8">
@@ -112,6 +120,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <h3>Question 9</h3>
         <div class="form-group">
             <label for="question9">I think we should take advantage of opportunities to travel.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question9">
@@ -122,6 +131,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
+        <h3>Question 10</h3>
         <div class="form-group">
             <label for="question10">I enjoy watching movies about historical events.</label><br>
             <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question10">
@@ -133,7 +143,7 @@
             </select>
         </div>
         <div id="error"></div>
-        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        <button type="submit" class="btn btn-primary" id="submit"><i class="fa fa-check"></i> Submit</button>
         <hr class="my-4">
         <a href="api/friends">API Friends List</a> | <a href="https://github.com/alixgrillo/FriendFinder"
             target="_blank">Github Repo</a>
@@ -145,7 +155,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title" id="staticBackdropLabel">Your best friend is:</h2>
+                    <h3 class="modal-title" id="staticBackdropLabel">Your best friend is:</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -155,7 +165,7 @@
                     <div class="col-sm-6" id="photo-div"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-user"></i> Close</button>
                 </div>
             </div>
         </div>
@@ -181,6 +191,9 @@
     #submit {
         width: 100%;
     }
+    .container{
+        padding-bottom: 30px;
+    }
 </style>
 <script type="text/javascript">
     $("#submit").on("click", function (event) {
@@ -200,17 +213,27 @@
         }
         console.log(newFriend);
         $.post("/api/friends", newFriend).then(function (bestFriend) {
-            console.log(bestFriend);
+            $("#name-div").empty();
+            $("#photo-div").empty();
             var nameDiv = $("#name-div");
             nameDiv.append("<h3>" + bestFriend.name + "</h3>");
             var photoDiv = $("#photo-div");
-            photoDiv.append("<img src=" + bestFriend.photo + " alt='" + bestFriend.name + "photo' width=200px>");
+            photoDiv.append("<img id='photo-id' src=" + bestFriend.photo + " alt='" + bestFriend.name + "photo' width=200px>");
+            $("#photo-id").error(function(){
+                photoDiv.empty();
+                photoDiv.append("<img id='photo-id' src='../../assets/no_photo.jpg' alt=' Sorry, no photo exists' width=200px>");
+            });
             $("#name").val("");
             $("#photo").val("");
             $("#error").empty();
+
             for (var i = 1; i < 11; i++) {
-                $("#question" + i).val("1 (Strongly Disagree)");
+                console.log("changing name");
+                $('[data-id="question'+ i +'"]')[0].selectedIndex = 0;
+                $("#question" + i)[0].selectedIndex = 0;
+                
             }
+            $(".filter-option").val('');
             $('.modal').modal("show");
         })
     })
