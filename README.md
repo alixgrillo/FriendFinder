@@ -2,6 +2,7 @@
 A matching tool to help you find like-minded friends
 
 Looking for friends? Answer 10 simple questions and find people who have similar answers. You'll find new friends in no time. 
+Access this site at: https://protected-forest-73370.herokuapp.com/api/friends.
 
 ## Table of Contents
 * [About](#about)
@@ -40,7 +41,8 @@ If you visit the API link after submitting a survey, the new "friend" will be sh
 * There are two HTML pages and one page that displays the API content in JSON.
 
 ## Requirements
-If you are running from the deployed Heroku site, then there are no requirements to use. 
+If you are running from the deployed Heroku site, then there are no requirements to use. You can access directly 
+at https://protected-forest-73370.herokuapp.com/api/friends.
 
 If you would like to fork this application and run directly, then you will need to run:
 `npm install`
