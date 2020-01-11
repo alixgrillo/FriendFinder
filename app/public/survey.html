@@ -11,9 +11,12 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel=“stylesheet” href=“https://use.fontawesome.com/releases/v5.6.3/css/all.css” integrity=“sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/” crossorigin=“anonymous” />
+    <link rel="stylesheet" href="/static/javascript/chosen.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/static/javascript/chosen.jquery.js"></script>
+    <script src="/static/javascript/chosen.proto.js"></script>
 
 
 </head>
@@ -35,7 +38,7 @@
         <h3>Question 1</h3>
         <div class="form-group">
             <label for="question1">I have a vivid imagination.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question1">
+            <select class="chosen-select" id="question1">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -46,7 +49,7 @@
         <h3>Question 2</h3>
         <div class="form-group">
             <label for="question2">I enjoy reading challenging books and articles.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question2">
+            <select class="chosen-select" id="question2">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -57,7 +60,7 @@
         <h3>Question 3</h3>
         <div class="form-group">
             <label for="question3">I always chat with lots of people at parties.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question3">
+            <select class="chosen-select" id="question3">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -68,7 +71,7 @@
         <h3>Question 4</h3>
         <div class="form-group">
             <label for="question4">I believe that there is no absolute right or wrong.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question4">
+            <select class="chosen-select" id="question4">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -79,7 +82,7 @@
         <h3>Question 5</h3>
         <div class="form-group">
             <label for="question5">I love to daydream.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question5">
+            <select class="chosen-select" id="question5">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -90,7 +93,7 @@
         <h3>Question 6</h3>
         <div class="form-group">
             <label for="question6">I do not enjoy going to art galleries or exhibitions.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question6">
+            <select class="chosen-select" id="question6">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -101,7 +104,7 @@
         <h3>Question 7</h3>
         <div class="form-group">
             <label for="question7">I am not interested in theoretical discussions.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question7">
+            <select class="chosen-select" id="question7">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -112,7 +115,7 @@
         <h3>Question 8</h3>
         <div class="form-group">
             <label for="question8">I look at the bright side of life.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question8">
+            <select class="chosen-select" id="question8">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -123,7 +126,7 @@
         <h3>Question 9</h3>
         <div class="form-group">
             <label for="question9">I think we should take advantage of opportunities to travel.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question9">
+            <select class="chosen-select" id="question9">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -134,7 +137,7 @@
         <h3>Question 10</h3>
         <div class="form-group">
             <label for="question10">I enjoy watching movies about historical events.</label><br>
-            <select data-live-search="true" data-live-search-style="startsWith" class="selectpicker" id="question10">
+            <select class="chosen-select" id="question10">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -196,6 +199,9 @@
     }
 </style>
 <script type="text/javascript">
+
+    $(".chosen-select").chosen();
+    
     $("#submit").on("click", function (event) {
         event.preventDefault();
         if ($("#name").val() == "" || $("#photo").val() == "") {
@@ -227,10 +233,12 @@
             $("#photo").val("");
             $("#error").empty();
 
+            $("#question1").val("");
+
             for (var i = 1; i < 11; i++) {
                 console.log("changing name");
-                $('[data-id="question'+ i +'"]')[0].selectedIndex = 0;
-                $("#question" + i)[0].selectedIndex = 0;
+                //$("#question" + i).val("");
+                $("#question" + i).val("1 (Strongly Disagree)").trigger("chosen:updated");
                 
             }
             $(".filter-option").val('');
